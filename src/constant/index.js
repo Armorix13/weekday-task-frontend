@@ -32,3 +32,11 @@ export const EmployeRangeOptions = [
   "201-500",
   "500+",
 ];
+
+export const confidentialityOptions = [
+  "You can feature/promote my profile with Weekday",
+  "Allow only my referrer to know for reference checks",
+  "Completely confidential",
+];
+
+export const OptionsData = ["Yes", "No"];

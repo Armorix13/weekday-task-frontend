@@ -30,7 +30,6 @@ const ContainerDropDOwn = () => {
 
   const handleMinExp = (newOptions) => {
     setselectedMinExp(newOptions);
-    console.log(newOptions);
     dispatch(SetMinExp(newOptions));
   };
 
@@ -43,22 +42,18 @@ const ContainerDropDOwn = () => {
 
   const handleEmployeChange = (newOptions) => {
     setselectedEmploye(newOptions);
-    console.log(newOptions);
   };
   const handleRemote = (newOptions) => {
     setselectedRemote(newOptions);
-    console.log(newOptions);
     dispatch(Onsiteremote(newOptions));
   };
   const handleBasePay = (newOptions) => {
     setselectedminBaseP(newOptions);
-    console.log(newOptions);
     dispatch(SetminbaseSalary(newOptions));
   };
 
   const handleCompany = (newOptions) => {
     setSelectedCompany(newOptions);
-    console.log(newOptions);
     dispatch(SearchCompany(newOptions));
   };
 

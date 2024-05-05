@@ -15,7 +15,6 @@ const Container = () => {
         {companyData.map((data) => (
           <JobCard key={data.id} Data={data} />
         ))}
-
         {isLoading && <Loader />}
         {companyData.length === 0 && <NotFound />}
       </div>

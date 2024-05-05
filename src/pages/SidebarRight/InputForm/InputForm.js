@@ -3,13 +3,9 @@ import "./inputform.css";
 import FormField from "../../../components/FormField/FormField";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { RadioField } from "../../../components/RadioType/RadioType";
+import { OptionsData, confidentialityOptions } from "../../../constant";
 
 const InputForm = () => {
-  const confidentialityOptions = [
-    "You can feature/promote my profile with Weekday",
-    "Allow only my referrer to know for reference checks",
-    "Completely confidential",
-  ];
   return (
     <>
       <div className={`formInput`}>
@@ -127,7 +123,7 @@ const InputForm = () => {
         <div className="form-input">
           <RadioField
             label="Would you be open to giving referrals to other job-seekers in your current company?"
-            options={confidentialityOptions}
+            options={OptionsData}
           />
         </div>
       </div>
