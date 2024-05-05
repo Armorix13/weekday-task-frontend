@@ -12,10 +12,21 @@ Make sure you have Node.js and npm installed on your machine.
 
 ### Installation
 
-1. Clone the repo
+1. Clone the Repository 
    ```sh
    git clone https://github.com/Rohitkum130202/weekday-task-frontend.git
-   cd weekday-task-frontend
+
+2. Change the directory
+   ```sh
+    cd weekday-task-frontend
+
+2. Install the required node_module
+   ```sh
    npm install
+
+4. Start the project
+   ```sh
    npm start
+   
+   
 
