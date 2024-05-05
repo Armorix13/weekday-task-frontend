@@ -1,0 +1,49 @@
+.Rightsidebar {
+  height: 100vh;
+
+  border-radius: 10px;
+  border: 0.5px solid #e2e8f0;
+  background-color: #bbfcea;
+}
+
+.rightIcons {
+  position: absolute;
+  margin-right: 80px;
+  margin-top: 12px;
+}
+.leftIcons {
+  position: absolute;
+  margin-top: 25px;
+  margin-right: 100px;
+}
+.profile1 {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  height: 50px;
+  width: 50px;
+}
+.inner_item {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.divider {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.EditIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.text {
+  font-weight: 700;
+  color: gray;
+}

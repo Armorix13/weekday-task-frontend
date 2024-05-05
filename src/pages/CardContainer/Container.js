@@ -16,9 +16,8 @@ const Container = () => {
           <JobCard key={data.id} Data={data} />
         ))}
 
-        {companyData.length === 0 && <NotFound />}
-
         {isLoading && <Loader />}
+        {companyData.length === 0 && <NotFound />}
       </div>
     </>
   );

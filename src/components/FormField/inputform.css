@@ -1,0 +1,20 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.formInput {
+  display: flex;
+  gap: 15px;
+}
+
+.LabelText {
+  font-size: 12px;
+}
+
+.form-label {
+  font-size: 12px;
+}
+.form-input {
+  border-radius: 5px;
+}

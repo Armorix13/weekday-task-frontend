@@ -1,0 +1,72 @@
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  border-radius: 15px;
+  border: 0.5px solid #e2e8f0;
+}
+.navbar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
+}
+.buttons {
+  cursor: pointer;
+  border-radius: 6px;
+  height: 25px;
+  width: 25px;
+  margin-top: 4px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.buttons:hover {
+  background: #f3f4f6;
+}
+.listitem {
+  flex: 1;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.profile {
+  display: flex;
+  width: 100%;
+  margin-left: 10px;
+}
+.profileicon {
+  height: 30px;
+  width: 30px;
+  font-size: 50px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  justify-items: center;
+}
+
+.profileIcon {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.Name {
+  margin-top: 8px;
+  margin-right: 20px;
+  padding-left: 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.rightIcon {
+  position: absolute;
+  margin-left: 15px;
+}
+.leftICons {
+  position: absolute;
+  margin-left: 30px;
+}

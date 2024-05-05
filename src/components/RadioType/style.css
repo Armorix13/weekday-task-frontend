@@ -1,0 +1,14 @@
+.radio-options {
+  display: flex;
+  flex-direction: column;
+}
+.small-text {
+  font-size: 10px;
+}
+.radio-label {
+  font-size: 10px;
+}
+
+.maxWidth {
+  width: 250px;
+}

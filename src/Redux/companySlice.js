@@ -28,6 +28,8 @@ const companySlice = createSlice({
     minbaseSalary: null,
     minExp: null,
     searchCompany: null,
+    expanded: true,
+    rightexpand: false,
   },
   reducers: {
     getRawJobs: (state, action) => {
@@ -56,6 +58,12 @@ const companySlice = createSlice({
       state.searchCompany = action.payload;
       state.filteredJobs = applyFilters(state.rawJobs, state);
     },
+    toggleExpanded: (state) => {
+      state.expanded = !state.expanded;
+    },
+    toggleExpandRight: (state) => {
+      state.rightexpand = !state.rightexpand;
+    },
   },
 });
 
@@ -66,5 +74,7 @@ export const {
   SetminbaseSalary,
   SetMinExp,
   SearchCompany,
+  toggleExpanded,
+  toggleExpandRight,
 } = companySlice.actions;
 export default companySlice.reducer;

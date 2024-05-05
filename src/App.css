@@ -1,0 +1,16 @@
+.topheading {
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  color: gray;
+  align-items: center;
+  margin-left: 15px;
+}
+.Placeright {
+  display: flex;
+  justify-content: right;
+  right: 0;
+  position: fixed;
+}
+.Flex {
+  display: flex;
+}

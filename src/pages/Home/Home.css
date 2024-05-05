@@ -1,3 +1,5 @@
 .homeScreen {
   min-height: 100vh;
+  margin-left: 25px;
+  flex: 1;
 }
