@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getCompanyApi } from "../Api/Apilist";
-import { getCompanys } from "../Redux/companySlice";
+import { getRawJobs } from "../Redux/companySlice";
 
 const useInfiniteScroll = () => {
   const dispatch = useDispatch();
-  const companyData = useSelector((state) => state.company.company);
+  const companyData = useSelector((state) => state.company.rawJobs);
   const [limit, setLimit] = useState(9);
   const [offset, setOffset] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       setIsLoading(true);
       const res = await axios.post(getCompanyApi, {
@@ -19,7 +19,7 @@ const useInfiniteScroll = () => {
         offset: offset,
       });
       if (res) {
-        dispatch(getCompanys([...companyData, ...res?.data?.jdList]));
+        dispatch(getRawJobs([...companyData, ...res?.data?.jdList]));
         setOffset(offset + limit);
       }
       setIsLoading(false);
@@ -27,7 +27,7 @@ const useInfiniteScroll = () => {
       console.log(error);
       setIsLoading(false);
     }
-  };
+  });
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,31 +1,22 @@
 import React from "react";
 import JobCard from "../../components/JobCard/JobCard";
 import "./Container.css";
-import { getCompanys } from "../../Redux/companySlice";
 import Loader from "../../components/Loader/Loader";
 import useInfiniteScroll from "../../hooks/Customhooks";
-import ContainerDropDOwn from "../DropDownContainer/DropDownContainer";
 import { useSelector } from "react-redux";
+import NotFound from "../../components/NotFound/NotFound";
 
 const Container = () => {
   const { isLoading } = useInfiniteScroll();
-
-  //companyData.filter((data) => dropdownArray.includes(data?.jobRole);
-  const companyData = useSelector((state) => state.company.company);
-
+  const companyData = useSelector((state) => state.company.filteredJobs);
   return (
     <>
-      <div className="dropdown">
-        <ContainerDropDOwn />
-      </div>
       <div className="card_container">
-        {companyData
-          .filter((data) =>
-            Object.values(data).every((value) => value !== null)
-          )
-          .map((data) => (
-            <JobCard key={data.id} Data={data} />
-          ))}
+        {companyData.map((data) => (
+          <JobCard key={data.id} Data={data} />
+        ))}
+
+        {companyData.length === 0 && <NotFound />}
 
         {isLoading && <Loader />}
       </div>

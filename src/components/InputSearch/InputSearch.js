@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField } from "@mui/material";
 import "./Input.css";
 
-const InputSearch = ({ height, width, placeholderText }) => {
+const InputSearch = ({ height, width, placeholderText, onChange }) => {
+  const [search, setSearch] = useState("");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+    onChange(e.target.value);
+  };
+
   return (
     <TextField
-      className="Input"
-      sx={{ height: height, width: width }}
-      id="outlined-basic"
-      variant="outlined"
       placeholder={placeholderText}
-      InputProps={{
-        style: { fontSize: "0.7rem" },
+      value={search}
+      onChange={handleChange}
+      style={{
+        height: height,
+        width: width,
+        borderRadius: "5px",
+        color: "#E2E2E2",
       }}
     />
   );

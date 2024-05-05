@@ -1,0 +1,28 @@
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+}
+
+.not-found-content {
+  text-align: center;
+}
+
+.not-found-heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.not-found-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.not-found-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}

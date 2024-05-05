@@ -10,7 +10,13 @@ import {
   Rolesoptions,
 } from "../../constant";
 import { useDispatch, useSelector } from "react-redux";
-import { setRole } from "../../Redux/companySlice";
+import {
+  Onsiteremote,
+  SearchCompany,
+  SetMinExp,
+  SetminbaseSalary,
+  setRole,
+} from "../../Redux/companySlice";
 
 const ContainerDropDOwn = () => {
   const dispatch = useDispatch();
@@ -20,10 +26,14 @@ const ContainerDropDOwn = () => {
   const [selectedMinExp, setselectedMinExp] = useState(null);
   const [selectedRemote, setselectedRemote] = useState([]);
   const [selectedminBaseP, setselectedminBaseP] = useState(null);
+  const [selectedCompany, setSelectedCompany] = useState(null);
 
   const handleMinExp = (newOptions) => {
     setselectedMinExp(newOptions);
+    console.log(newOptions);
+    dispatch(SetMinExp(newOptions));
   };
+
   const handleRoleChange = (newOptions) => {
     setSelectedRole(newOptions);
     const combinedArray = [...Role, ...newOptions];
@@ -38,10 +48,18 @@ const ContainerDropDOwn = () => {
   const handleRemote = (newOptions) => {
     setselectedRemote(newOptions);
     console.log(newOptions);
+    dispatch(Onsiteremote(newOptions));
   };
   const handleBasePay = (newOptions) => {
     setselectedminBaseP(newOptions);
     console.log(newOptions);
+    dispatch(SetminbaseSalary(newOptions));
+  };
+
+  const handleCompany = (newOptions) => {
+    setSelectedCompany(newOptions);
+    console.log(newOptions);
+    dispatch(SearchCompany(newOptions));
   };
 
   return (
@@ -80,7 +98,7 @@ const ContainerDropDOwn = () => {
         width="140px"
         height="40px"
         placeholderText="Remote"
-        isMulti={true}
+        isMulti={false}
       />
       <MultiSelectDropdown
         options={MinBasePay}
@@ -95,6 +113,7 @@ const ContainerDropDOwn = () => {
         height="45px"
         width="200px"
         placeholderText="Search Company Name"
+        onChange={handleCompany}
       />
     </div>
   );
