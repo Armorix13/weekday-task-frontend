@@ -1,0 +1,28 @@
+.button {
+  width: 290px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border-radius: 15px;
+  padding-top: 3px;
+  cursor: pointer;
+}
+.button_inner {
+  display: flex;
+  gap: 5px;
+}
+
+.easy {
+  margin-top: 5px;
+  color: yellow;
+}
+
+.text {
+  font-weight: 500;
+  margin-top: 4px;
+}
+.person {
+  margin-top: 4px;
+}

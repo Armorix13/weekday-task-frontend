@@ -1,0 +1,123 @@
+.card {
+  height: 560px;
+  width: 320px;
+  border-radius: 20px !important;
+  justify-content: space-between;
+}
+.card_heading {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 15px;
+  width: fit-content;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.card_heading_text {
+  margin-left: 5px;
+  font-size: 13px;
+  margin-top: 2px;
+}
+.logo_info {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.info {
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+}
+.info_company {
+  cursor: pointer;
+  font-size: 13px;
+  color: gray;
+}
+.info_company:hover {
+  cursor: pointer;
+  font-size: 13px;
+  color: gray;
+  text-decoration: underline;
+}
+.info_role {
+  font-size: 13px;
+  color: black;
+}
+.info_country {
+  font-size: 13px;
+  font-weight: bold;
+}
+.salary {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+
+.aboutCOmpany {
+  margin-top: 15px;
+  font-size: 17px;
+  color: black;
+  font-weight: 600;
+}
+.aboutus {
+  font-weight: 700;
+  color: black;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  color: black;
+}
+.button_alignment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.min_exp {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+
+.min_exp_ans {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.parent-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.text-container {
+  color: blue;
+  font-weight: 400;
+  text-align: 15px;
+  text-decoration: none;
+}
+
+.text-container:hover {
+  color: blue;
+  font-weight: 400;
+  text-align: 15px;
+  text-decoration: underline;
+}
+.expericence {
+  display: flex;
+  gap: 30px;
+  height: 65px;
+}

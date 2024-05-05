@@ -1,0 +1,47 @@
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: #4caf50;
+  animation: bounce 0.8s ease-in-out infinite;
+}
+
+.loader-dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loader-dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loader-dot:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loader-dot:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
